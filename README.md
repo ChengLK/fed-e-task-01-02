@@ -96,7 +96,7 @@
     })
     let user = { id: 2, name: 'Albert'}
     let ex3 = user => safeProp('name')(user).map(fp.first)._value
-    ex3()
+    ex3(user)
     ```
 
 11. 联系8：使用 Maybe 重写 ex4，不要有if语句
