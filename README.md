@@ -55,7 +55,7 @@
 7. 练习4：使用flowRight写一个sanitizeName()函数，返回一个下划线连续的小写字符串，把数组中的name转为这种形式：例如：sanitizeName([''Hello Word"]) => ["hello_word"]
 
    ```javascript
-   let _underscore = fp.replace(/\s+/g, '_')
+   let _underscore = fp.replace(/\W+/g, '_')
    const sanitizeNames = fp.map(car=>{
        car.name = fp.flowRight(_underscore,fp.toLower)(car.name)
        return car
